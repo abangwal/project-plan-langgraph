@@ -37,7 +37,7 @@ RESPONSE:
 {response}
 """
 
-api_key = "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"
+api_key = ""
 
 
 def MarketMan():
