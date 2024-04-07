@@ -89,23 +89,3 @@ def Grader():
         output_schema=GraderSchema, llm=model, prompt=prompt
     )
     return runnable
-
-
-## test inference
-"""
-agent1 = MarketMan()
-agent2 = Planner()
-agent3 = Grader()
-response = agent1.invoke(
-    {"objective": "Do market researh on a EV startup", "feedback": ""}
-)
-print(response.steps, "\n")
-
-response2 = agent2.invoke({"step": response.steps[1], "feedback": ""})
-print(response2.plan, "\n")
-
-response3 = agent3.invoke({"objective": response.steps[1], "response": response2.plan})
-print(response3.grade, "\n\n", response3.feedback)
-
-response4 = agent2.invoke({"step": response.steps[1], "feedback": response3.feedback})
-print("After feedback :", "\n\n", response4.plan)"""
